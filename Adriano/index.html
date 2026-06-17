@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adriano — Кофейня в Бишкеке</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== PRELOADER ===== -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="coffee-cup">
+      <div class="steam s1"></div>
+      <div class="steam s2"></div>
+      <div class="steam s3"></div>
+    </div>
+    <span class="preloader-text">Adriano</span>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <nav class="nav-container">
+    <a href="#" class="logo">
+      <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+      <span class="logo-text">Adriano</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#menu">Меню</a></li>
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#delivery">Доставка</a></li>
+      <li><a href="#" id="branches-trigger">Наши филиалы</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cart-btn">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+      <button class="burger" id="burger-btn" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#menu" class="mm-link">Меню</a></li>
+      <li><a href="#about" class="mm-link">О нас</a></li>
+      <li><a href="#delivery" class="mm-link">Доставка</a></li>
+      <li><a href="#" class="mm-link" id="branches-trigger-mob">Наши филиалы</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-parallax" id="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <!-- Floating coffee beans -->
+  <div class="beans-container" id="beans"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-aos="fade-up" data-aos-delay="200">Бишкек · с 2018 года</p>
+    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="350">
+      Мы не гонимся<br /><em>за трендами.</em>
+    </h1>
+    <p class="hero-sub" data-aos="fade-up" data-aos-delay="500">
+      Мы просто делаем кофе, который хочется пить каждый день.
+    </p>
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="650">
+      <a href="#menu" class="btn btn-primary">Смотреть меню</a>
+      <a href="#delivery" class="btn btn-outline">Заказать доставку</a>
+    </div>
+    <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
+      <div class="stat"><span class="stat-num">7</span><span class="stat-label">Филиалов</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">47</span><span class="stat-label">Позиций в меню</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">4.9</span><span class="stat-label">Рейтинг Glovo</span></div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Скролл</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== TICKER ===== -->
+<div class="ticker-wrap">
+  <div class="ticker" id="ticker">
+    <span>Капучино 220 сом</span><span class="dot">●</span>
+    <span>Яйца Бенедикт 480 сом</span><span class="dot">●</span>
+    <span>Раф с лавандой 260 сом</span><span class="dot">●</span>
+    <span>Авокадо-тост 390 сом</span><span class="dot">●</span>
+    <span>Матча Латте 280 сом</span><span class="dot">●</span>
+    <span>Панкейки с ягодами 420 сом</span><span class="dot">●</span>
+    <span>Эспрессо 140 сом</span><span class="dot">●</span>
+    <span>Круассан 180 сом</span><span class="dot">●</span>
+    <span>Капучино 220 сом</span><span class="dot">●</span>
+    <span>Яйца Бенедикт 480 сом</span><span class="dot">●</span>
+    <span>Раф с лавандой 260 сом</span><span class="dot">●</span>
+    <span>Авокадо-тост 390 сом</span><span class="dot">●</span>
+    <span>Матча Латте 280 сом</span><span class="dot">●</span>
+    <span>Панкейки с ягодами 420 сом</span><span class="dot">●</span>
+  </div>
+</div>
+
+<!-- ===== MENU ===== -->
+<section id="menu">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Наше меню</span>
+      <h2 class="section-title">Всё, что нужно<br /><em>для хорошего дня</em></h2>
+      <p class="section-desc">Завтраки подают до пяти вечера. Потому что кто сказал, что яйца Бенедикт  только по утрам?</p>
+    </div>
+
+    <!-- Category tabs -->
+    <div class="category-tabs" id="category-tabs">
+      <button class="cat-tab active" data-cat="all">☕ Все</button>
+      <button class="cat-tab" data-cat="coffee">☕ Кофе</button>
+      <button class="cat-tab" data-cat="tea">🍵 Чай</button>
+      <button class="cat-tab" data-cat="milkshakes">🥤 Шейки</button>
+      <button class="cat-tab" data-cat="breakfast">🍳 Завтраки</button>
+      <button class="cat-tab" data-cat="pastry">🥐 Выпечка</button>
+      <button class="cat-tab" data-cat="desserts">🍰 Десерты</button>
+    </div>
+
+    <!-- Menu grid -->
+    <div class="menu-grid" id="menu-grid">
+
+      <!-- COFFEE -->
+      <div class="menu-card" data-cat="coffee" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-img-wrap">
+          <img src="img/кофе__капучино.png" alt="Капучино" loading="lazy" />
+          <div class="card-badge hot">Горячий</div>
+          <button class="card-add-btn" data-name="Капучино" data-price="190" data-img="img/кофе__капучино.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Капучино</h3>
+          <p>Эспрессо, вспененное молоко</p>
+          <div class="card-footer">
+            <span class="price">190 сом</span>
+            <span class="weight">200 мл</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="coffee" data-aos="fade-up" data-aos-delay="60">
+        <div class="card-img-wrap">
+          <img src="img/кофе__Мокко.png" alt="Мокко" loading="lazy" />
+          <div class="card-badge hot">Горячий</div>
+          <button class="card-add-btn" data-name="Мокко" data-price="300" data-img="img/кофе__Мокко.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Мокко</h3>
+          <p>Эспрессо, молоко, шоколадный соус</p>
+          <div class="card-footer">
+            <span class="price">300 сом</span>
+            <span class="weight">300 мл</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="coffee" data-aos="fade-up" data-aos-delay="120">
+        <div class="card-img-wrap">
+          <img src="img/кофе__Раф__Лавандовый.png" alt="Раф Лавандовый" loading="lazy" />
+          <div class="card-badge bestseller">Хит</div>
+          <button class="card-add-btn" data-name="Раф Лавандовый" data-price="270" data-img="img/кофе__Раф__Лавандовый.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Раф Лавандовый</h3>
+          <p>Эспрессо, молоко, лавандовый сироп</p>
+          <div class="card-footer">
+            <span class="price">270 сом</span>
+            <span class="weight">300 мл</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="coffee" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-img-wrap">
+          <img src="img/кофе__Раф.png" alt="Раф Соленая карамель" loading="lazy" />
+          <button class="card-add-btn" data-name="Раф Соленая карамель" data-price="270" data-img="img/кофе__Раф.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Раф Соленая карамель</h3>
+          <p>Раф «Соленая карамель» (300 мл) — это нежный кофейный напиток с вкусом солёной карамели.</p>
+          <div class="card-footer">
+            <span class="price">270 сом</span>
+            <span class="weight">300 мл</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="coffee" data-aos="fade-up" data-aos-delay="60">
+        <div class="card-img-wrap">
+          <img src="img/кофе__Айс__карамельный__маккиато.jpg" alt="Айс карамельный маккиато" loading="lazy" />
+          <div class="card-badge cold">Холодный</div>
+          <button class="card-add-btn" data-name="Айс карамельный маккиато" data-price="250" data-img="img/кофе__Айс__карамельный__маккиато.jpg">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3> Айс карамельный маккиато</h3>
+          <p>Эспрессо, молоко, карамельный соус, лед</p>
+          <div class="card-footer">
+            <span class="price">250 сом</span>
+            <span class="weight">230 мл</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="coffee" data-aos="fade-up" data-aos-delay="120">
+        <div class="card-img-wrap">
+          <img src="img/кофе__Латте.png" alt="Латте Кофе" loading="lazy" />
+          <div class="card-badge cold">Горячий</div>
+          <button class="card-add-btn" data-name="Латте Кофе" data-price="200" data-img="img/кофе__Латте.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Латте</h3>
+          <p>Эспрессо, молоко</p>
+          <div class="card-footer">
+            <span class="price">200 сом</span>
+            <span class="weight">300 мл</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEA -->
+      <div class="menu-card" data-cat="tea" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-img-wrap">
+          <img src="img/чай__Ягодный__микс.jpg" alt="Ягодный микс" loading="lazy" />
+          <div class="card-badge bestseller">Хит</div>
+          <button class="card-add-btn" data-name="Ягодный микс" data-price="250" data-img="img/чай__Ягодный__микс.jpg">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Ягодный микс</h3>
+          <p>Японский зелёный чай с взбитым молоком. Энергия без кофеиновых скачков.</p>
+          <div class="card-footer">
+            <span class="price">250 сом</span>
+            <span class="weight">500 мл</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="tea" data-aos="fade-up" data-aos-delay="60">
+        <div class="card-img-wrap">
+          <img src="img/чай__Лесные__травы.jpg" alt="Лесные травы" loading="lazy" />
+          <button class="card-add-btn" data-name="Лесные травы" data-price="250" data-img="img/чай__Лесные__травы.jpg">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Лесные травы</h3>
+          <p>Чай «Лесные травы» — это травяной напиток с ароматом и вкусом лесных растений.</p>
+          <div class="card-footer">
+            <span class="price">250 сом</span>
+            <span class="weight">500 мл</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="tea" data-aos="fade-up" data-aos-delay="120">
+        <div class="card-img-wrap">
+          <img src="img/чай__Чай__Шиповник.jpg" alt="Чай Шиповник" loading="lazy" />
+          <button class="card-add-btn" data-name="Чай Шиповник" data-price="200" data-img="img/чай__Чай__Шиповник.jpg">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Чай Шиповник</h3>
+          <p>Чай шиповник — это травяной чай с ярким вкусом и ароматом ягод шиповника.</p>
+          <div class="card-footer">
+            <span class="price">200 сом</span>
+            <span class="weight">500 мл</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MILKSHAKES -->
+      <div class="menu-card" data-cat="milkshakes" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-img-wrap">
+          <img src="img/милкшейк__Клубничный.jpg" alt="Клубничный шейк" loading="lazy" />
+          <div class="card-badge bestseller">Хит</div>
+          <button class="card-add-btn" data-name="Клубничный шейк" data-price="300" data-img="img/милкшейк__Клубничный.jpg">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Клубничный шейк</h3>
+          <p>Клубничное мороженое, молоко</p>
+          <div class="card-footer">
+            <span class="price">300 сом</span>
+            <span class="weight">350 мл</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="milkshakes" data-aos="fade-up" data-aos-delay="60">
+        <div class="card-img-wrap">
+          <img src="img/милкшейк__Сникерс.jpeg" alt="Сникерс милкшейк" loading="lazy" />
+          <button class="card-add-btn" data-name="Сникерс милкшейк" data-price="350" data-img="img/милкшейк__Сникерс.jpeg">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Сникерс милкшейк</h3>
+          <p>Сникерс милкшейк — это сладкий молочный коктейль с вкусом шоколада и орехов.</p>
+          <div class="card-footer">
+            <span class="price">350 сом</span>
+            <span class="weight">350 мл</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BREAKFAST -->
+      <div class="menu-card" data-cat="breakfast" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-img-wrap">
+          <img src="img/завтрак__Адриано.png" alt="Завтрак Адриано" loading="lazy" />
+          <div class="card-badge bestseller">Хит</div>
+          <button class="card-add-btn" data-name="Завтрак Адриано" data-price="480" data-img="img/Завтрак__Адриано.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Завтрак Адриано</h3>
+          <p>скрембл из 2х яиц, подается с обжаренным картофелем, шампиньонами, фасоль в томате, венскими колбасками или слабосоленной форелью на выбор , свежими томатами, микс салатом заправленный азиатским соусом, багет собственного производства и чесночным соусом</p>
+          <div class="card-footer">
+            <span class="price">655 сом</span>
+            <span class="weight">420 г</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="breakfast" data-aos="fade-up" data-aos-delay="60">
+        <div class="card-img-wrap">
+          <img src="img/завтрак__Скандинавский.png" alt="Скандинавский завтрак" loading="lazy" />
+          <div class="card-badge bestseller">Хит</div>
+          <button class="card-add-btn" data-name="Скандинавский завтрак" data-price="390" data-img="img/завтрак__Скандинавский.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Скандинавский завтрак</h3>
+          <p>Легкий и сытный завтрак в составе которого: яйцо скрембл, слабосолёная форель, авокадо,подается с помидора черри,шпинатом и 2мя кусочками бородинского хлеба собственного производства.</p>
+          <div class="card-footer">
+            <span class="price">650 сом</span>
+            <span class="weight">320 г</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="breakfast" data-aos="fade-up" data-aos-delay="120">
+        <div class="card-img-wrap">
+          <img src="img/завтрак__Картофельный_хашбраун.png" alt="артофельный хашбраун с жая" loading="lazy" />
+          <button class="card-add-btn" data-name="артофельный хашбраун с жая" data-price="655" data-img="img/завтрак__Картофельный_хашбраун.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Картофельный хашбраун с жая</h3>
+          <p>Драники, жая или слабосильная форель на выбор, яйцо, помидоры, огурцы, соус голландский, микс салата , азиатский соус, бородинский хлеб, черный кунжут.</p>
+          <div class="card-footer">
+            <span class="price">655 сом</span>
+            <span class="weight">400 г</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="breakfast" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-img-wrap">
+          <img src="img/завтрак__Англпйский.png" alt="Английский завтрак" loading="lazy" />
+          <button class="card-add-btn" data-name="Английский завтрак" data-price="550" data-img="img/завтрак__Англпйский.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Английский завтрак</h3>
+          <p>Глазунья из 2х яиц подается со свежими листьями салата, корнишонами, черри, теплой фасолью, обжареными кусочками</p>
+          <div class="card-footer">
+            <span class="price">550 сом</span>
+            <span class="weight">320 г</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASTRY -->
+      <div class="menu-card" data-cat="pastry" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-img-wrap">
+          <img src="img/выпечка__Круассан__с__фисташковым__кремом.png" alt="Круассан с фисташковым кремом" loading="lazy" />
+          <button class="card-add-btn" data-name="Круассан с фисташковым кремом" data-price="200" data-img="img/выпечка__Круассан__с__фисташковым__кремом.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Круассан с фисташковым кремом</h3>
+          <p>Французский десерт из слоеного теста с начинкой из фисташкового крема покрытый шоколадной глазурью</p>
+          <div class="card-footer">
+            <span class="price">200 сом</span>
+            <span class="weight">90 г</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="pastry" data-aos="fade-up" data-aos-delay="60">
+        <div class="card-img-wrap">
+          <img src="img/выпечка__Эклер__с__шоколадом.png" alt="Эклер" loading="lazy" />
+          <div class="card-badge hot">Тёплый</div>
+          <button class="card-add-btn" data-name="Эклер с шоколадом" data-price="170" data-img="img/выпечка__Эклер__с__шоколадом.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Эклер с шоколадом</h3>
+          <p>Сливочное тесто с заварным кремом с добавлением тёмного шоколада</p>
+          <div class="card-footer">
+            <span class="price">170 сом</span>
+            <span class="weight">150 г</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="pastry" data-aos="fade-up" data-aos-delay="120">
+        <div class="card-img-wrap">
+          <img src="img/выпечка__Печенье__Криспи__матча.png" alt="Печенье Криспи матча" loading="lazy" />
+          <button class="card-add-btn" data-name="Печенье Криспи матча" data-price="120" data-img="img/выпечка__Печенье__Криспи__матча.png"">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Печенье Криспи матча</h3>
+          <p>Хрустящее американское песочное печенье с нотками чая матча, фисташками и малиной</p>
+          <div class="card-footer">
+            <span class="price">120 сом</span>
+            <span class="weight">100 г</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="menu-card" data-cat="desserts" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-img-wrap">
+          <img src="img/десерт__Чизкейк__Сан-Себастьян.png" alt="Чизкейк Сан-Себастьян" loading="lazy" />
+          <div class="card-badge bestseller">Хит</div>
+          <button class="card-add-btn" data-name="Чизкейк Сан-Себастьян" data-price="295" data-img="img/десерт__Чизкейк__Сан-Себастьян.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Чизкейк Сан-Себастьян</h3>
+          <p>Нежный сливочный чизкейк с нотками карамели и ягодным компоте.</p>
+          <div class="card-footer">
+            <span class="price">295 сом</span>
+            <span class="weight">150 г</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="desserts" data-aos="fade-up" data-aos-delay="60">
+        <div class="card-img-wrap">
+          <img src="img/дисерт__Фисташковый__рулет.png" alt="Фисташковый рулет" loading="lazy" />
+          <button class="card-add-btn" data-name="Фисташковый рулет" data-price="390" data-img="img/дисерт__Фисташковый__рулет.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Фисташковый рулет</h3>
+          <p>Фисташковый рулет с меренгой и свежей малиной</p>
+          <div class="card-footer">
+            <span class="price">390 сом</span>
+            <span class="weight">160 г</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="desserts" data-aos="fade-up" data-aos-delay="120">
+        <div class="card-img-wrap">
+          <img src="img/десерт_Круассан__с__миндальным__пралине.png" alt="Круассан с миндальным пралине" loading="lazy" />
+          <button class="card-add-btn" data-name="Круассан с миндальным пралине" data-price="190" data-img="img/десерт_Круассан__с__миндальным__пралине.png">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Круассан с миндальным пралине</h3>
+          <p>Слоёный воздушный круассан с миндальной начинкой</p>
+          <div class="card-footer">
+            <span class="price">190 сом</span>
+            <span class="weight">140 г</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /menu-grid -->
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="about-parallax" id="about-bg"></div>
+  <div class="about-overlay"></div>
+  <div class="container about-inner">
+    <div class="about-text" data-aos="fade-right">
+      <span class="section-tag light">О нас</span>
+      <h2 class="section-title light">Приходи за кофе,<br /><em>оставайся за атмосферой</em></h2>
+      <p>Мы знаем, как это работает. Сначала ты заходишь "на пять минут". Потом смотришь на часы — прошло два часа. И ты уже заказываешь второй капучино.</p>
+      <p>Наши бариста — не роботы с инструкцией. Они знают кофе лучше, чем ты знаешь свой плейлист. Расскажи, что любишь — они придумают, что предложить.</p>
+      <div class="about-features">
+        <div class="feat-item">
+          <i class="fa-solid fa-seedling"></i>
+          <span>Зёрна из Эфиопии и Колумбии прямой обжарки</span>
+        </div>
+        <div class="feat-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Завтраки до 17:00 каждый день</span>
+        </div>
+        <div class="feat-item">
+          <i class="fa-solid fa-wifi"></i>
+          <span>Быстрый Wi-Fi и розетки на каждом столе</span>
+        </div>
+        <!-- <div class="feat-item">
+          <i class="fa-solid fa-dog"></i>
+          <span>Мы pet-friendly — собакам рады</span>
+        </div> -->
+      </div>
+    </div>
+    <div class="about-imgs" data-aos="fade-left">
+      <div class="about-img-main">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80&fit=crop" alt="Интерьер кофейни" />
+      </div>
+      <div class="about-img-small">
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300&q=80&fit=crop" alt="Бариста готовит кофе" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DELIVERY ===== -->
+<section id="delivery">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Доставка</span>
+      <h2 class="section-title">Всё то же самое,<br /><em>только домой</em></h2>
+      <p class="section-desc">Кофе не остынет — обещаем. Выберите удобный сервис доставки.</p>
+    </div>
+    <div class="delivery-cards" data-aos="fade-up" data-aos-delay="100">
+      <a href="https://glovoapp.com/kg/ru/bishkek/adriano-coffee-bsk/" target="_blank" rel="noopener" class="delivery-card glovo">
+        <div class="delivery-logo" style="background: #FFC244; display: flex; align-items: center; justify-content: center;">
+          <img src="https://cdn.simpleicons.org/glovo/00A082" alt="Glovo" style="width: 30px; height: 30px;" />
+        </div>
+        <div class="delivery-info">
+          <h3>Glovo</h3>
+          <p>Доставка за 30–45 минут</p>
+          <span class="delivery-cta">Заказать <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <div class="delivery-card whatsapp" id="whatsapp-order-btn">
+        <div class="delivery-logo">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div class="delivery-info">
+          <h3>WhatsApp</h3>
+          <p>Прямой заказ через чат</p>
+          <span class="delivery-cta">Написать <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CART SIDEBAR ===== -->
+<div class="sidebar-overlay" id="cart-overlay"></div>
+<aside class="cart-sidebar" id="cart-sidebar">
+  <div class="sidebar-header">
+    <h3><i class="fa-solid fa-bag-shopping"></i> Корзина</h3>
+    <button class="sidebar-close" id="cart-close"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cart-items">
+    <div class="cart-empty" id="cart-empty">
+      <i class="fa-solid fa-mug-hot"></i>
+      <p>Пока пусто.<br/>Добавьте что-нибудь из меню!</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-total">
+      <span>Итого:</span>
+      <span id="cart-total-price">0 сом</span>
+    </div>
+    <button class="btn btn-primary full-width" id="whatsapp-send-btn">
+      <i class="fa-brands fa-whatsapp"></i> Отправить заказ в WhatsApp
+    </button>
+    <p class="cart-note">Оператор свяжется с вами для подтверждения</p>
+  </div>
+</aside>
+
+<!-- ===== BRANCHES SIDEBAR ===== -->
+<div class="sidebar-overlay" id="branches-overlay"></div>
+<aside class="branches-sidebar" id="branches-sidebar">
+  <div class="sidebar-header">
+    <h3><i class="fa-solid fa-location-dot"></i> Наши филиалы</h3>
+    <button class="sidebar-close" id="branches-close"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="branches-list" id="branches-list">
+
+    <div class="branch-card" data-lat="42.8764" data-lng="74.6070">
+      <div class="branch-img">
+        <img src="https://srasstudents.org/wp-content/uploads/2014/12/Adriano-Coffe.jpg" alt="Филиал Центр" />
+      </div>
+      <div class="branch-info">
+        <div class="branch-name">Adriano Центр <span class="branch-tag nearest" style="display:none">Ближайший</span></div>
+        <div class="branch-addr"><i class="fa-solid fa-location-dot"></i> пр. Чуй 127, Бишкек</div>
+        <div class="branch-hours"><i class="fa-regular fa-clock"></i> 08:00 – 24:00</div>
+        <a href="https://maps.google.com/?q=42.8764,74.6070" target="_blank" class="branch-route-btn">
+          <i class="fa-solid fa-route"></i> Построить маршрут
+        </a>
+      </div>
+    </div>
+
+    <div class="branch-card" data-lat="42.8741" data-lng="74.6146">
+      <div class="branch-img">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/09/75/55/17/adriano-coffee.jpg" alt="Филиал Victory" />
+      </div>
+      <div class="branch-info">
+        <div class="branch-name">Adriano БЦ Victory <span class="branch-tag nearest" style="display:none">Ближайший</span></div>
+        <div class="branch-addr"><i class="fa-solid fa-location-dot"></i> ул. Ибраимова 103, Бишкек</div>
+        <div class="branch-hours"><i class="fa-regular fa-clock"></i> 08:00 – 23:00</div>
+        <a href="https://maps.google.com/?q=42.8741,74.6146" target="_blank" class="branch-route-btn">
+          <i class="fa-solid fa-route"></i> Построить маршрут
+        </a>
+      </div>
+    </div>
+
+    <div class="branch-card" data-lat="42.8341" data-lng="74.6180">
+      <div class="branch-img">
+        <img src="https://dontstopliving.net/wp-content/uploads/2016/04/P1540884.jpg" alt="Филиал Южный" />
+      </div>
+      <div class="branch-info">
+        <div class="branch-name">Adriano Южный <span class="branch-tag nearest" style="display:none">Ближайший</span></div>
+        <div class="branch-addr"><i class="fa-solid fa-location-dot"></i> ул. Юнусалиева 171/1, Бишкек</div>
+        <div class="branch-hours"><i class="fa-regular fa-clock"></i> 08:00 – 23:00</div>
+        <a href="https://maps.google.com/?q=42.8341,74.6180" target="_blank" class="branch-route-btn">
+          <i class="fa-solid fa-route"></i> Построить маршрут
+        </a>
+      </div>
+    </div>
+
+    <div class="branch-card" data-lat="42.8220" data-lng="74.6060">
+      <div class="branch-img">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/18/a5/7f/be/adriano-coffee.jpg" alt="Филиал Магистраль" />
+      </div>
+      <div class="branch-info">
+        <div class="branch-name">Adriano Магистраль <span class="branch-tag nearest" style="display:none">Ближайший</span></div>
+        <div class="branch-addr"><i class="fa-solid fa-location-dot"></i> ул. Аалы Токомбаева 53/1, Бишкек</div>
+        <div class="branch-hours"><i class="fa-regular fa-clock"></i> 09:00 – 23:00</div>
+        <a href="https://maps.google.com/?q=42.8220,74.6060" target="_blank" class="branch-route-btn">
+          <i class="fa-solid fa-route"></i> Построить маршрут
+        </a>
+      </div>
+    </div>
+
+    <div class="branch-card" data-lat="42.8420" data-lng="74.5860">
+      <div class="branch-img">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/19/99/16/d6/non-smoking-area-where.jpg" alt="Филиал 299/4" />
+      </div>
+      <div class="branch-info">
+        <div class="branch-name">Adriano 299 <span class="branch-tag nearest" style="display:none">Ближайший</span></div>
+        <div class="branch-addr"><i class="fa-solid fa-location-dot"></i> пр. Чынгыза Айтматова 299/4, Бишкек</div>
+        <div class="branch-hours"><i class="fa-regular fa-clock"></i> 08:00 – 23:00</div>
+        <a href="https://maps.google.com/?q=42.8420,74.5860" target="_blank" class="branch-route-btn">
+          <i class="fa-solid fa-route"></i> Построить маршрут
+        </a>
+      </div>
+    </div>
+
+    <div class="branch-card" data-lat="42.8520" data-lng="74.5880">
+      <div class="branch-img">
+        <img src="https://smak.kg/wp-content/uploads/2016/02/IMG_5971-1.jpg" alt="Филиал Байчечекей" />
+      </div>
+      <div class="branch-info">
+        <div class="branch-name">Adriano Байчечекей <span class="branch-tag nearest" style="display:none">Ближайший</span></div>
+        <div class="branch-addr"><i class="fa-solid fa-location-dot"></i> пр. Чынгыза Айтматова 29, Бишкек</div>
+        <div class="branch-hours"><i class="fa-regular fa-clock"></i> 08:00 – 23:00</div>
+        <a href="https://maps.google.com/?q=42.8520,74.5880" target="_blank" class="branch-route-btn">
+          <i class="fa-solid fa-route"></i> Построить маршрут
+        </a>
+      </div>
+    </div>
+
+    <div class="branch-card" data-lat="42.8750" data-lng="74.5900">
+      <div class="branch-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f3/84/4b/our-barista-makes-the.jpg?w=1200&h=-1&s=1" alt="Филиал Исанова" />
+      </div>
+      <div class="branch-info">
+        <div class="branch-name">Adriano Исанова <span class="branch-tag nearest" style="display:none">Ближайший</span></div>
+        <div class="branch-addr"><i class="fa-solid fa-location-dot"></i> ул. Исанова 87, Бишкек</div>
+        <div class="branch-hours"><i class="fa-regular fa-clock"></i> 08:00 – 24:00</div>
+        <a href="https://maps.google.com/?q=42.8750,74.5900" target="_blank" class="branch-route-btn">
+          <i class="fa-solid fa-route"></i> Построить маршрут
+        </a>
+      </div>
+    </div>
+
+  </div>
+</aside>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="logo logo-light">
+        <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+        <span class="logo-text">Adriano</span>
+      </a>
+      <p>Мы просто делаем кофе, который хочется пить каждый день.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://wa.me/996700000000" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="#menu">Меню</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#delivery">Доставка</a></li>
+        <li><a href="#" id="branches-trigger-footer">Наши филиалы</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Доставка</h4>
+      <ul>
+        <li><a href="https://glovoapp.com/kg/ru/bishkek/adriano-coffee-bsk/" target="_blank" rel="noopener">Glovo</a></li>
+
+        <li><a href="https://wa.me/996700000000" target="_blank" rel="noopener">WhatsApp заказ</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Контакты</h4>
+      <p><i class="fa-solid fa-phone"></i> +996 555 707 083</p>
+      <p><i class="fa-solid fa-envelope"></i> hello@adriano.kg</p>
+      <p><i class="fa-regular fa-clock"></i> Пн–Вс: 08:00 – 23:00</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Adriano — Кофейня в Бишкеке. Все права защищены.</p>
+  </div>
+</footer>
+<!-- ===== MOBILE BOTTOM NAV ===== -->
+<nav class="bottom-nav">
+  <a href="#menu" class="bnav-item">
+    <i class="fa-solid fa-utensils"></i>
+    <span>Меню</span>
+  </a>
+  <a href="#delivery" class="bnav-item">
+    <i class="fa-solid fa-motorcycle"></i>
+    <span>Доставка</span>
+  </a>
+  <a href="#" class="bnav-item" id="branches-trigger-bnav">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Филиалы</span>
+  </a>
+  <button class="bnav-item bnav-cart" id="cart-btn-mobile">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span>Корзина</span>
+    <span class="cart-count-mob" id="cart-count-mob">0</span>
+  </button>
+</nav>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
